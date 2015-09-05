@@ -4,7 +4,6 @@ __author__ = 'JayantArora'
 from tkinter import *
 
 
-
 def main_window():
     window = Tk()
     window.geometry("600x300")
@@ -14,6 +13,8 @@ def main_window():
     water.config(background="blue")
     water.pack(padx=50, pady=50)
     window.mainloop()
+
+
 
 
 
