@@ -16,6 +16,7 @@ class Ball:
         self.dx = 0.006
         self.dy = 0.030
 
+
     def gender(self):
         colors = {1: 'blue', 2: 'deep pink'}
         return colors[randrange(1, 3)]
@@ -28,7 +29,7 @@ class Ball:
         centerX = center.getX()
         centerY = center.getY()
 
-        if (centerX + self.dx) >= 10 or (centerX + self.dx) <= 0:
+        if (centerX + self.dx) >= 10 or (centerX + self.dx) <= 10:
             self.dx = - self.dx
         if (centerY + self.dy) >= 10 or (centerY + self.dy) <= 0:
             self.dy = - self.dy
@@ -45,6 +46,7 @@ def main():
     while True:
         for ball in balls:
             ball.move()
+
 
 if __name__ == "__main__":
     main()
