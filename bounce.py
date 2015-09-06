@@ -14,7 +14,7 @@ class Ball:
         self.ball.draw(win)
         self.ball.setFill(self.gender())
         self.dx = 0.006
-        self.dy = 0.0075
+        self.dy = 0.030
 
     def gender(self):
         colors = {1: 'blue', 2: 'deep pink'}
