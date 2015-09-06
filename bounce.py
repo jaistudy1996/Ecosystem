@@ -47,7 +47,5 @@ def main():
         for ball in balls:
             ball.move()
            
-
-
 if __name__ == "__main__":
     main()
