@@ -15,7 +15,7 @@ for i in range(50):
  flake.append(w.create_text(random.randrange(400),random.randrange(300),text="*",fill="#ffffff",font="Times 30"))
  moves.append([0.04 + random.random()/10,0.7 + random.random()])
 try:
- while 1:
+ # while 1:
   for i in range(len(flake)):
    p = w.coords(flake[i])
    print("Akshaydasdsad", p)
