@@ -19,12 +19,13 @@ def main_window():
     canvas.pack()
 
     bears = []
-    fish = []
+    moves = []
 
     for i in range(100):
         bearX = 10*random()
         bearY = 10*random()
-        bears.append((bearX, bearY))
+        bears.append([bearX, bearY])
+        moves.append([0.04 + random()/10,0.7 + random()])
         #print(bears)
 
 
@@ -37,8 +38,20 @@ def main_window():
         bear = canvas.create_oval(50*x, 50*y, (50*x)+10, (50*y)+10)
         bear2 = canvas.create_oval(100*x, 100*y, (100*x)+10, (100*y)+10)
 
-    #for k in range(10000):
+    for i in range(len(bears)):
+        z = canvas.coords(bears[i])
+        print(z)
 
+        a[0] += moves[i][0]
+        a[1] += moves[i][1]
+        b[0] += moves[i][0]
+        b[1] += moves[i][1]
+        canvas.coords(bears[i],a[0],a[1])
+
+    if(p[1]>310):
+        window.coords(bear[i],randrange(400),-10)
+        window.update_idletasks() # redraw
+        window.update() # process events
 
 
     window.mainloop()
