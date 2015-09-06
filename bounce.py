@@ -29,7 +29,7 @@ class Ball:
         centerX = center.getX()
         centerY = center.getY()
 
-        if (centerX + self.dx) >= 10 or (centerX + self.dx) <= 10:
+        if (centerX + self.dx) >= 10 or (centerX + self.dx) <= 0:
             self.dx = - self.dx
         if (centerY + self.dy) >= 10 or (centerY + self.dy) <= 0:
             self.dy = - self.dy
