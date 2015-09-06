@@ -17,7 +17,7 @@ class Ball:
         self.dy = 0.0075
 
     def gender(self):
-        colors = {1: 'blue', 2: 'pink'}
+        colors = {1: 'blue', 2: 'deep pink'}
         return colors[randrange(1, 3)]
 
     # in bool numbers evaluate to false
