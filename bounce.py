@@ -13,8 +13,8 @@ class Ball:
         self.ball = Circle(Point(10 * random() - 1, 10 * random() - 1), 0.15)
         self.ball.draw(win)
         self.ball.setFill(self.gender())
-        self.dx = 0.29
-        self.dy = 0.165
+        self.dx = 0.19
+        self.dy = 0.065
 
     def gender(self):
         colors = {1: 'blue', 2: 'pink'}
