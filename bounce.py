@@ -14,7 +14,7 @@ class Ball:
         self.ball.draw(win)
         self.ball.setFill(self.gender())
         self.dx = 0.006
-        self.dy = 0.030
+        self.dy = 0.090
 
 
     def gender(self):
@@ -29,7 +29,7 @@ class Ball:
         centerX = center.getX()
         centerY = center.getY()
 
-        if (centerX + self.dx) >= 10 or (centerX + self.dx) <= 10:
+        if (centerX + self.dx) >= 10 or (centerX + self.dx) <= 0:
             self.dx = - self.dx
         if (centerY + self.dy) >= 10 or (centerY + self.dy) <= 0:
             self.dy = - self.dy
