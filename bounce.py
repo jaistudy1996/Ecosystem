@@ -39,7 +39,7 @@ def main():
     win = GraphWin("Bounce", 500, 500)
     win.setCoords(0, 0, 10, 10)
     balls = []
-    for i in range(300):
+    for i in range(150):
         balls.append(Ball(win))
 
     while True:
