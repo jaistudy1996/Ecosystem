@@ -26,45 +26,73 @@ def main():
             print("stay at same place")
             sleep(3)
             print("slept 3 secs")
-
+        ########
         if will_change == 2:
             # bear[index] = bear[index+1]
             if river[index][1] != river[index+1][1] and river[index][0] == river[index+1][0]:
-                river.append((choice(gender), 10*random()))
-                print("Bear born")
+                ani = choice(animal)
+                gen = choice(gender)
+                river.append((ani, gen, 10*random()))
+                print(ani+" "+gen+" born")
                 sleep(3)
                 print("slept 3 secs")
-
-            if river[index][1] == river[index+1][1] or river[index][0] != river[index+1][0]:
+        ########
+            if river[index][1] == river[index+1][1] and river[index][0] == river[index+1][0]:
                 if river[index][2] > river[index+1][2]:
+                    print("2, "+river[index+1][0]+" died")
                     del(river[index+1])
-                    print("2, bear died")
                     sleep(3)
                     print("slept 3 secs")
-                if river[index][1] < river[index+1][1]:
+                if river[index][2] < river[index+1][2]:
+                    print("2, "+river[index][0]+" died")
                     del(river[index])
-                    print("2, bear died")
                     sleep(3)
                     print("slept 3 secs")
+        ########
+            if river[index][0] != river[index+1][0]:
+                if river[index][0] == 'bear':
+                    print("Bear killed fish")
+                    del(river[index+1])
+                    sleep(3)
+                    print("slept 3 seconds")
+                else:
+                    print("bear killed fish")
+                    del(river[index])
+                    sleep(3)
+                    print("slept 3 seconds")
+        ########
 
         if will_change == 3:
-            if river[index][0] != river[index-1][0]:
-                river.append((choice(gender), 10*random()))
-                print("Bear born")
+            if river[index][1] != river[index-1][1] and river[index][0] == river[index-1][0]:
+                ani = choice(animal)
+                gen = choice(gender)
+                river.append((ani, gen, 10*random()))
+                print(ani+" "+gen+" born")
                 sleep(3)
                 print("slept 3 secs")
-
-            if river[index][0] == river[index][0]:
-                if river[index][1] > river[index-1][1]:
+        ########
+            if river[index][1] == river[index-1][1] and river[index][0] == river[index-1][0]:
+                if river[index][2] > river[index-1][2]:
+                    print("2, "+river[index-1][0]+" died")
                     del(river[index-1])
-                    print("3, bear died")
                     sleep(3)
                     print("slept 3 secs")
-
-                if river[index][1] < river[index-1][1]:
+                if river[index][2] < river[index-1][2]:
+                    print("2, "+river[index][0]+" died")
                     del(river[index])
-                    print("3, bear died")
                     sleep(3)
                     print("slept 3 secs")
+        ########
+            if river[index][0] != river[index-1][0]:
+                if river[index][0] == 'bear':
+                    print("Bear killed fish")
+                    del(river[index-1])
+                    sleep(3)
+                    print("slept 3 seconds")
+                else:
+                    print("Bear killed fish")
+                    del(river[index])
+                    sleep(3)
+                    print("slept 3 seconds")
 
 main()
