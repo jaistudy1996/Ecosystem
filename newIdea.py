@@ -94,7 +94,7 @@ def main():
         print("\nEcosystem's life stopped!")
         stop = time()
         time_run = str(stop-start)
-        log = ["The program ran for:", time_run, "Stopped at index: ", str(index), str(will_change)]
+        log = ["The program ran for:", time_run, "Stopped at index: ", str(index)]
         print(" ".join(log))
 
 
