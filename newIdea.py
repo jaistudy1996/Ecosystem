@@ -19,7 +19,10 @@ def main():
 
     while True:
         index = randint(1, len(river))
-        will_change = randint(1, 4)
+        will_change = randint(1, 4)     # possible chances where the object will mova
+                                        # if 1: stay where it is
+                                        # if 2: move to the next location in the list
+                                        # if 3: will move to the previous location
 
         if will_change == 1:        # if 1 then the bear stays where it is
             river[index] = river[index]
