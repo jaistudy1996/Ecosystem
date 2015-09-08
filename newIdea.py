@@ -93,9 +93,9 @@ def main():
     except KeyboardInterrupt:
         print("\nEcosystem's life stopped!")
         stop = time()
-        time_run = stop-start
-        log = ["The program ran for:", time_run, "Stopped at index: ", index, will_change]
-        print(log)
+        time_run = str(stop-start)
+        log = ["The program ran for:", time_run, "Stopped at index: ", str(index), str(will_change)]
+        print(" ".join(log))
 
 
 main()
