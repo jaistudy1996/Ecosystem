@@ -14,7 +14,7 @@ class Ball:
         self.ball.draw(win)
         self.ball.setFill(self.gender())
         self.dx = 0.006
-        self.dy = 0.030
+        self.dy = 0.090
 
 
     def gender(self):
@@ -47,7 +47,5 @@ def main():
         for ball in balls:
             ball.move()
            
-
-
 if __name__ == "__main__":
     main()
